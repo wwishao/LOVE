@@ -1,0 +1,102 @@
+@font-face {
+    font-family: 'Xingyenian';
+    src: url(../lib/新叶念体.otf);
+    font-display: block;
+}
+
+body {
+    font-family: 'Xingyenian';
+    background: #FFB5C5;
+    overflow: hidden;
+    margin: 0;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+body::-webkit-scrollbar {
+    display: none;
+}
+
+
+.box {
+    position: relative;
+    top: -50vw;
+    left: 10%;
+    display: flex;
+}
+.text {
+    position: absolute;
+    width: auto;
+    top: 0;
+    font-size: 2vw;
+    color: #d82f54;
+    /* animation: animats 5s linear infinite; */
+    z-index: 88;
+    user-select: none;
+    transition: all 5s;
+}
+.love_img {
+    position: absolute;
+    /* top: -50vw; */
+}
+img {
+    position: relative;
+    /* margin: 2vw; */
+    width: 20vw;
+    height: 20vw;
+    /* aspect-ratio: 1; */
+    object-fit: cover;
+    --_m: radial-gradient(#000 49%, #0000 52%) 74.5% fill/100%;
+    -webkit-mask-box-image: var(--_m);
+    mask-border: var(--_m);
+    clip-path: polygon(-50% 0, 50% 74%, 150% 0);
+    user-select: none;
+    transition: all 5s;
+    /* animation: imganimats 5s linear infinite; */
+}
+.wlx {
+    position: absolute;
+    bottom: 1vw;
+    right: 1vw;
+    font-size: 2vw;
+    color: rgb(253, 253, 253);
+}
+.colors {
+    color: transparent;
+    background-image: linear-gradient(#9c27b08f,#e91e63);
+    -webkit-background-clip: text;
+}
+.timer {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    top: 2vw;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 2.3vw;
+}
+.timer div:last-child {
+    margin-top: 1vw;
+    animation: Textanimats 1s linear alternate infinite;
+}
+.yusheng {
+    position: absolute;
+    width: 30vw;
+    bottom: 1vw;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #f8f8f8;
+    font-size: 2vw;
+}
+@keyframes Textanimats{
+    to {
+        transform :scale(1.1);
+    }
+}
+
+@keyframes imganimats{
+        to {
+            transform : translateY(50vw) scale(1.5);
+            opacity: 0;
+    }
+}
